@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html>
+<title>Supreme</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">-->
+<head>
+    <style>
+
+        .header{
+
+        }
+
+        body{
+            background:url(img/fondo-gris-227355.jpg);
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        /*img.dna{*/
+            /*transform: rotate(-44deg);*/
+        /*}*/
+
+        #myVideo {
+            /*position: fixed;*/
+            right: 0px;
+            bottom: 0px;
+            min-width: 100%;
+            min-height:100%;
+            z-index:-1;
+            filter:opacity(70%);
+        }
+
+        #myVideo2 {
+            /*position: fixed;*/
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height:100%;
+            z-index:-1;
+            filter:opacity(70%);
+        }
+
+        .content {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1;
+            width: 100%;
+            padding: 20px;
+        }
+
+
+        .content2 {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .sticky + #myVideo  {
+            padding-top: 102px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<div class=" header w3-container" id="header" style="z-index: 5">
+    <div class="w3-bar w3-text-white ">
+        <div class="w3-bar-item ">
+            <a href="https://www.google.com" >
+                <img class= "dna w3-padding-16" src=" img/4.png" style="width:30% "  alt="dna">
+            </a>
+        </div>
+        <div class=" w3-bar-item w3-dropdown-hover w3-padding-32 w3-large"  style=" margin-left:80px  ">HOME
+            <div class="w3-dropdown-content w3-card-2 w3-bar-block">
+                <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                <a href="#" class="w3-bar-item w3-button">Link 3</a>
+            </div>
+        </div>
+        <div class=" w3-bar-item w3-dropdown-hover w3-padding-32 w3-large" style=" margin-left:80px ">POST
+            <div class="w3-dropdown-content w3-card-2 w3-bar-block">
+                <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                <a href="#" class="w3-bar-item w3-button">Link 3</a>
+            </div>
+        </div>
+        <div class=" w3-bar-item w3-dropdown-hover w3-padding-32 w3-large" style=" margin-left:80px">MESSAGE
+            <div class="w3-dropdown-content w3-card-2 w3-bar-block">
+                <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                <a href="#" class="w3-bar-item w3-button">Link 3</a>
+            </div>
+        </div>
+        <div class=" w3-bar-item w3-dropdown-hover w3-padding-32 w3-large" style=" margin-left:80px">TIMELINE
+            <div class="w3-dropdown-content w3-card-2 w3-bar-block">
+                <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                <a href="#" class="w3-bar-item w3-button">Link 3</a>
+            </div>
+        </div>
+        <!-- Sidebar -->
+        <div class="w3-sidebar w3-bar-block w3-dark-grey w3-animate-right" style="display:none;z-index:4;right:0px" id="mySidebar">
+            <div class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</div>
+            <a href="#" class="w3-bar-item w3-button ">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button">Link 3</a>
+        </div>
+         <!-- Overlay -->
+        <div class="w3-overlay w3-animate-opacity" id="myOverlay"></div>
+        <!-- Page Content-->
+        <div class="w3-bar-item  w3-xxlarge w3-right w3-padding-16" onclick="w3_open()">
+            <i class="fa fa-bars" style="font-size:28px;color:white;"></i>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+<div class=" content" >
+    <h1> Watch out</h1>
+        Lorem ipsum dolor sit amet, an
+        his etiam torquatos. Tollit soleat
+        phaedrum te duo, eum cu recteque
+        expetendis neglegentur. Cu mentitum maiestatis
+        persequeris pro, pri ponderum tractatos ei. Id qui
+        nemore latine molestiae, ad mutat oblique delicatissimi pro.
+</div>
+<video autoplay muted loop id="myVideo">
+    <source src="video/123.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+
+
+<div class=" content2">
+    <h1> Watch out2</h1>
+        Lorem ipsum dolor sit amet, an
+        his etiam torquatos. Tollit soleat
+        phaedrum te duo, eum cu recteque
+        expetendis neglegentur. Cu mentitum maiestatis
+        persequeris pro, pri ponderum tractatos ei. Id qui
+        nemore latine molestiae, ad mutat oblique delicatissimi pro.
+</div>
+<video autoplay muted loop id="myVideo2">
+    <source src="video/456.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+
+
+
+
+<script>
+
+    window.onscroll = function() {myFunction()};
+
+
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
+
+
+
+// Get the video
+    var video = document.getElementById("myVideo");
+
+// Get the button
+    var btn = document.getElementById("myBtn");
+
+
+    var header = document.getElementById("header");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+
+</script>
+
+</body>
+</html>
